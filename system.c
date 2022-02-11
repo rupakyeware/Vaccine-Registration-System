@@ -14,22 +14,22 @@ struct Vaccine
 void insert(int AadharId, char *name, char *phone, float TimeSlot)
 {
 
-    struct Vaccine *student = (struct Vaccine *)malloc(sizeof(struct Vaccine));
-    student->AadharId = AadharId;
-    strcpy(student->name, name);
-    strcpy(student->phone, phone);
-    student->TimeSlot = TimeSlot;
-    student->next = NULL;
+    struct Vaccine *vaccine = (struct Vaccine *)malloc(sizeof(struct Vaccine));
+    vaccine->AadharId = AadharId;
+    strcpy(vaccine->name, name);
+    strcpy(vaccine->phone, phone);
+    vaccine->TimeSlot = TimeSlot;
+    vaccine->next = NULL;
 
     if (head == NULL)
     {
 
-        head = student;
+        head = vaccine;
     }
     else
     {
-        student->next = head;
-        head = student;
+        vaccine->next = head;
+        head = vaccine;
     }
 }
 //------------------------------------------------------------------------------------------------------------------//
